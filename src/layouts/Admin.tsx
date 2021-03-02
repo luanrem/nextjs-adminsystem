@@ -1,11 +1,18 @@
 import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
+import Sidebar from '../components/Sidebar/Sidebar';
 
-export default function Admin({children, ...rest}) {
+import { Container, Content, PageContent } from '../styles/layouts/Admin';
+
+export default function Admin({ children, ...rest }) {
   return (
-    <>
-    <AdminNavbar />
-    <h2>Admin component</h2>
-    <div>{children}</div>
-    </>
+    <Container>
+      <AdminNavbar />
+      <Content>
+        
+        <Sidebar />
+        
+        <PageContent>{children}</PageContent>
+      </Content>
+    </Container>
   )
 }

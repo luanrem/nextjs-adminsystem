@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { maxWidthContainer } from '../../config/stylesconfig';
+import { maxWidthContainer, navBarHeight } from '../../config/stylesconfig';
 
 export const Content = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ export const Content = styled.div`
 export const Container = styled.div`
   max-width: ${maxWidthContainer};
   margin: 0 auto;
-  height: 5rem;
+  height: ${navBarHeight};
 
   padding: 0 1rem;
 
