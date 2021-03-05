@@ -1,17 +1,22 @@
+import { useEffect } from "react";
 import AdminNavbar from "../components/AdminNavbar/AdminNavbar";
 import Sidebar from '../components/Sidebar/Sidebar';
 
-import { Container, Content, PageContent } from '../styles/layouts/Admin';
+import BackToTopIcon from '../components/BackToTopIcon/BackToTopIcon';
+
+import { Container, Content, PageContent, Scroll } from '../styles/layouts/Admin';
 
 export default function Admin({ children, ...rest }) {
+
   return (
-    <Container>
+    <Container >
       <AdminNavbar />
       <Content>
-        
         <Sidebar />
-        
-        <PageContent>{children}</PageContent>
+        <PageContent>
+            {children}
+        </PageContent>
+        <BackToTopIcon showBelow={80} />
       </Content>
     </Container>
   )

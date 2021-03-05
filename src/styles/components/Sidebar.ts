@@ -9,4 +9,9 @@ export const Container = styled.div`
   border-radius: 14px;
 
   box-shadow: 5px 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  
+  position: fixed;
 `;
