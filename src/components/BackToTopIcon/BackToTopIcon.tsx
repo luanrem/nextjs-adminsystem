@@ -36,7 +36,15 @@ export default function BackToTopIcon({ showBelow }: paramsDTO) {
   return (
     <>
       {show &&
-        <Container>
+        <Container
+          initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20
+          }}
+        >
           <IconButton onClick={handleClick}>
             <ExpandLessIcon />
           </IconButton>

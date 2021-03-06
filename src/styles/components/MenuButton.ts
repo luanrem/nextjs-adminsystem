@@ -1,6 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+import { motion } from 'framer-motion';
+
+interface ContainerProps {
+  isActive: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   width: 100%;
   height: 2.5rem;
 
@@ -20,15 +26,26 @@ export const Container = styled.div`
   h2 {
     justify-self: start;
     font-size: 1.1rem;
+
+    ${props =>
+      props.isActive &&
+      css`
+        color: var(--blue);
+      `
+    }
   }
 `;
 
-export const Slide = styled.div`
+export const Slide = styled(motion.div)`
   justify-self: start;
   position: relative;
-  right: 5rem;
+  right: 15rem;
 
-  width: 1rem;
+  border-radius: 30px 0 0 30px;
+
+  width: 12rem;
   height: 100%;
-  background: white;
+  background: var(--background);
+
+  z-index: -1;
 `;

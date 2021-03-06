@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { Icon } from "@material-ui/core";
 import ButtonBase from '@material-ui/core/ButtonBase';
 
+import { motion } from 'framer-motion';
+
 import { Container, Slide } from '../../styles/components/MenuButton';
 
 export default function ManuButton({ layout, path, name, icon }) {
@@ -18,11 +20,20 @@ export default function ManuButton({ layout, path, name, icon }) {
   return (
     <Link href={layout + path}>
       <ButtonBase>
-        <Container>
+        <Container isActive={active}>
           <Icon className="Icon">{icon}</Icon>
           <h2>{name}</h2>
           { active ?
-            <Slide /> :
+            <Slide 
+              initial={{
+                scaleX: 0,
+                x: 100
+              }}
+              animate={{
+                scaleX: 1,
+                x: 0
+              }}
+            /> :
             null
           }
         </Container>
