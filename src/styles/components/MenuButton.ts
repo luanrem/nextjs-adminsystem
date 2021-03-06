@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: 1rem 0;
 
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 30% 70% 1%;
   gap: 2rem;
   align-items: center;
 
@@ -21,5 +21,14 @@ export const Container = styled.div`
     justify-self: start;
     font-size: 1.1rem;
   }
+`;
 
+export const Slide = styled.div`
+  justify-self: start;
+  position: relative;
+  right: 5rem;
+
+  width: 1rem;
+  height: 100%;
+  background: white;
 `;

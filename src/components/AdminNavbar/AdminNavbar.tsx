@@ -1,6 +1,7 @@
 
 import { Content, Container, Title, MobileHeader } from '../../styles/components/AdminNavbar';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import NavBarProfile from '../NavBarProfile/NavBarProfile';
 import Button from '@material-ui/core/Button'
 
@@ -8,6 +9,8 @@ import Hidden from '@material-ui/core/Hidden';
 import Menu from "@material-ui/icons/Menu";
 
 export default function AdminNavbar({ }) {
+  const router = useRouter();
+
   return (
     <Content>
       <Container>
@@ -20,7 +23,12 @@ export default function AdminNavbar({ }) {
               </Link>
             </Button>
 
-            <Button size="small">Voltar</Button>
+            <Button 
+              size="small" 
+              onClick={() => router.back()}
+            >
+              Voltar
+            </Button>
           </Title>
 
           <NavBarProfile />

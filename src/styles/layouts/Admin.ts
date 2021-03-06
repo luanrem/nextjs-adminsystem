@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import PerfectScrollbar from 'react-custom-scrollbars';
-
 import { maxWidthContainer, sideBarWidth } from '../../config/stylesconfig';
 
 export const Container = styled.div`
@@ -22,8 +20,4 @@ export const PageContent = styled.section`
   flex-grow: 0;
 
   margin: 0 1rem 0 auto;
-`;
-
-export const Scroll = styled(PerfectScrollbar)`
-  max-height: 100%;
 `;

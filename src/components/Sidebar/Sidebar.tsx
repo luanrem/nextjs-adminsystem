@@ -1,11 +1,8 @@
-import { useCallback, useEffect } from "react";
-import Link from "next/link";
 import { Container } from '../../styles/components/Sidebar';
 
 import MenuButton from '../MenuButton/MenuButton';
 
 import routes from '../../routes/routes';
-import { List } from "@material-ui/core";
 
 export default function Sidebar() {
 
