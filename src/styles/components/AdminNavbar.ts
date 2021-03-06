@@ -22,13 +22,15 @@ export const Container = styled.div`
 
 export const Title = styled.div`
   display: flex;
+  
+  span {
+    margin-right: 3rem;
+  }
 
   h1 {
     font-family: GoodTimes, Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--gray-line);
-
-    padding-right: 3rem;
   }
 
   button {

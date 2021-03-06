@@ -14,7 +14,11 @@ export default function AdminNavbar({ }) {
 
         <Hidden smDown>
           <Title>
-            <h1>MISSÃO RAMA</h1>
+            <Button>
+              <Link href="/admin/dashboard">
+                <h1>MISSÃO RAMA</h1>
+              </Link>
+            </Button>
 
             <Button size="small">Voltar</Button>
           </Title>
@@ -25,7 +29,11 @@ export default function AdminNavbar({ }) {
         <Hidden mdUp>
           <MobileHeader>
             <Title>
-              <Link href="/admin/dashboard"><h1>MISSÃO RAMA</h1></Link>
+              <Button>
+                <Link href="/admin/dashboard">
+                  <h1>MISSÃO RAMA</h1>
+                </Link>
+              </Button>
 
               <Button size="small">Voltar</Button>
             </Title>

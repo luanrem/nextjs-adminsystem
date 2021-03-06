@@ -17,5 +17,11 @@ export const Container = styled.div`
   
   position: fixed;
 
-
+  button:first-child {
+    margin-top: 5rem;
+  }
+  
+  .space {
+    flex-grow: 1;
+  }
 `;

@@ -8,6 +8,13 @@ const routes = [
     layout: "/admin",
   },
   {
+    name: "Facilitação",
+    icon: "android",
+    
+    path: "/facilitacao",
+    layout: "/admin",
+  },
+  {
     name: "Atas",
     icon: "description",
     

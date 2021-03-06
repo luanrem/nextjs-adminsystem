@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   h2 {
     justify-self: start;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
 `;

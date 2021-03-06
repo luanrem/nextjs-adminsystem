@@ -21,11 +21,19 @@ export default function Sidebar() {
               path={prop.path}
               name={prop.name}
               icon={prop.icon}
-            >
-            </MenuButton>
+            />
           );
         })
       }
+        <div className="space"/>
+        <MenuButton
+          layout="/admin"
+          path="/configuracao"
+          name="Configuração"
+          icon="settings"
+        />
+
+
     </Container>
   );
 }
