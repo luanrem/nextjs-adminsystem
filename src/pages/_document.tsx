@@ -24,6 +24,8 @@ export default class MyDocument extends Document {
 
             <link rel="shortcut icon" href="favicon.ico"/>
 
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
             <link rel="preload" href="/fonts/good_times_rg.ttf" as="font" />

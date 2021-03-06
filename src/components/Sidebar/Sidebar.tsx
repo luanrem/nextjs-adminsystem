@@ -1,16 +1,31 @@
+import { useCallback, useEffect } from "react";
 import Link from "next/link";
 import { Container } from '../../styles/components/Sidebar';
 
+import MenuButton from '../MenuButton/MenuButton';
+
+import routes from '../../routes/routes';
+import { List } from "@material-ui/core";
+
 export default function Sidebar() {
+
+
   return (
     <Container>
-      SideBar
-      <Link href="/admin/dashboard">Dashboard</Link>
-      <Link href="/admin/atas">atas</Link>
-      <Link href="/admin/calendario">calendario</Link>
-      <Link href="/admin/forum">forum</Link>
-      <Link href="/admin/materiais">materiais</Link>
-      <Link href="/admin/relatos">relatos</Link>
+      {
+        routes.map((prop, key) => {
+          return (
+            <MenuButton
+              key={key}
+              layout={prop.layout}
+              path={prop.path}
+              name={prop.name}
+              icon={prop.icon}
+            >
+            </MenuButton>
+          );
+        })
+      }
     </Container>
   );
 }

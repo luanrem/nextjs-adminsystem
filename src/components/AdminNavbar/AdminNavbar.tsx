@@ -1,5 +1,6 @@
 
 import { Content, Container, Title, MobileHeader } from '../../styles/components/AdminNavbar';
+import Link from 'next/link';
 import NavBarProfile from '../NavBarProfile/NavBarProfile';
 import Button from '@material-ui/core/Button'
 
@@ -24,7 +25,7 @@ export default function AdminNavbar({ }) {
         <Hidden mdUp>
           <MobileHeader>
             <Title>
-              <h1>MISSÃO RAMA</h1>
+              <Link href="/admin/dashboard"><h1>MISSÃO RAMA</h1></Link>
 
               <Button size="small">Voltar</Button>
             </Title>
