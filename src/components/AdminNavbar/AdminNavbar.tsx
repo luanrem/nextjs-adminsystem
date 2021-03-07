@@ -7,9 +7,17 @@ import Button from '@material-ui/core/Button'
 
 import Hidden from '@material-ui/core/Hidden';
 import Menu from "@material-ui/icons/Menu";
+import Drawer from "@material-ui/core/Drawer";
+import DrawerSideBar from '../DrawerSideBar/DrawerSideBar';
+import { useCallback, useState } from 'react';
 
-export default function AdminNavbar({ }) {
+export default function AdminNavbar() {
+  const [open, setOpen] = useState(false);
   const router = useRouter();
+
+  const HandleOpenDrawer = useCallback(() => {
+    setOpen(!open);
+  }, [open])
 
   return (
     <Content>
@@ -43,12 +51,24 @@ export default function AdminNavbar({ }) {
                 </Link>
               </Button>
 
-              <Button size="small">Voltar</Button>
             </Title>
 
-            <Menu />
+            <Button onClick={HandleOpenDrawer}>
+              <Menu/>
+            </Button>
+            
           </MobileHeader>
-
+          <Drawer
+            variant="temporary"
+            className="drawerPaper"
+            anchor="right"
+            open={open}
+          >
+            <DrawerSideBar 
+              setOpen={setOpen}
+              open={open}
+            />
+          </Drawer>
         </Hidden>
 
       </Container>

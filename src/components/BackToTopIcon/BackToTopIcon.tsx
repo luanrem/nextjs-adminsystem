@@ -42,7 +42,7 @@ export default function BackToTopIcon({ showBelow }: paramsDTO) {
           transition={{
             type: "spring",
             stiffness: 260,
-            damping: 20
+            damping: 18
           }}
         >
           <IconButton onClick={handleClick}>

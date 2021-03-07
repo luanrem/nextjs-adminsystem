@@ -11,7 +11,7 @@ import { Container, Slide } from '../../styles/components/MenuButton';
 
 export default function ManuButton({ layout, path, name, icon }) {
   const router = useRouter();
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     router.pathname === layout + path ? setActive(true) : setActive(false)

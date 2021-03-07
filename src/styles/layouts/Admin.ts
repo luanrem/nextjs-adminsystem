@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { maxWidthContainer, sideBarWidth } from '../../config/stylesconfig';
+
+interface PageContentProps {
+  isMobile: boolean;
+}
 
 export const Container = styled.div`
   
@@ -15,9 +19,20 @@ export const Content = styled.div`
 
 `;
 
-export const PageContent = styled.section`
+export const PageContent = styled.section<PageContentProps>`
   width: calc(100% - ${sideBarWidth} - 2rem);
   flex-grow: 0;
 
-  margin: 0 1rem 0 auto;
+  ${props =>
+      props.isMobile ?
+      css`
+        margin: 0 1rem 0 0;
+        width: 100%;
+      `
+      :
+      css`
+        margin: 0 1rem 0 auto;
+      `
+    }
+  
 `;
