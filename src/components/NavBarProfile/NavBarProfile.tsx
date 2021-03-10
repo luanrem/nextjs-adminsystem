@@ -6,8 +6,8 @@ import Avatar from '@material-ui/core/Avatar';
 
 import Poppers from "@material-ui/core/Popper";
 
-import { Container, NameContainer, NotificationBall, NotificationList, ScrollbarsContainer } from '../../styles/components/NavBarProfile';
-import { Button, ClickAwayListener, ListItem, ListItemText, Paper } from '@material-ui/core';
+import { Container, NameContainer, NotificationBall, NotificationList, ScrollbarsContainer, MotionDiv } from '../../styles/components/NavBarProfile';
+import { Button, ClickAwayListener, Divider, ListItem, ListItemText, Paper } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import Link from 'next/link';
 
@@ -34,6 +34,7 @@ export default function NavBarProfile() {
     setOpenPhoto(null);
   }, [setOpenPhoto]);
 
+
   return (
     <Container >
       <Button onClick={handleClickNotification}>
@@ -44,42 +45,60 @@ export default function NavBarProfile() {
       </Button>
 
 
+
       <Poppers
         open={Boolean(openNotification)}
         anchorEl={openNotification}
       >
-        <Paper>
-          <ClickAwayListener onClickAway={handleCloseNotification}>
-            <NotificationList>
-              <ScrollbarsContainer>
-                <div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                  <div><span>Item da Lista</span></div>
-                </div>
-              </ScrollbarsContainer>
-            </NotificationList>
-          </ClickAwayListener>
-        </Paper>
+        <MotionDiv
+          initial={{
+            scaleY: 0,
+            y: -100
+          }}
+          animate={{
+            scaleY: 1,
+            y: 0
+          }}
+          transition={{
+            type: "tween"
+          }}
+        >
+          <Paper>
+            <ClickAwayListener onClickAway={handleCloseNotification}>
+              <NotificationList>
+                <ScrollbarsContainer>
+                  <List>
+                    <ListItem button>
+                      <ListItemText primary="Notificacao" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
+                      <ListItemText primary="Notificacao" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
+                      <ListItemText primary="Notificacao" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
+                      <ListItemText primary="Notificacao" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
+                      <ListItemText primary="Notificacao" />
+                    </ListItem>
+                    <Divider />
+                    <ListItem button>
+                      <ListItemText primary="Notificacao" />
+                    </ListItem>
+                    <Divider />
+                  </List>
+                </ScrollbarsContainer>
+              </NotificationList>
+            </ClickAwayListener>
+          </Paper>
+        </MotionDiv>
+
       </Poppers>
 
 
@@ -99,22 +118,36 @@ export default function NavBarProfile() {
         open={Boolean(openPhoto)}
         anchorEl={openPhoto}
       >
-        <Paper>
-          <ClickAwayListener onClickAway={handleClosePhoto}>
-            <List>
-              <Link href="/admin/perfil">
-                <ListItem button onClick={handleClosePhoto}>
-                  <ListItemText primary="Perfil" />
-                </ListItem>
-              </Link>
-              <Link href="/admin/configuracao">
-                <ListItem button onClick={handleClosePhoto}>
-                  <ListItemText primary="Configurações" />
-                </ListItem>
-              </Link>
-            </List>
-          </ClickAwayListener>
-        </Paper>
+        <MotionDiv
+          initial={{
+            scaleY: 0,
+            y: -100
+          }}
+          animate={{
+            scaleY: 1,
+            y: 0
+          }}
+          transition={{
+            type: "tween",
+          }}
+        >
+          <Paper>
+            <ClickAwayListener onClickAway={handleClosePhoto}>
+              <List>
+                <Link href="/admin/perfil">
+                  <ListItem button onClick={handleClosePhoto}>
+                    <ListItemText primary="Perfil" />
+                  </ListItem>
+                </Link>
+                <Link href="/admin/configuracao">
+                  <ListItem button onClick={handleClosePhoto}>
+                    <ListItemText primary="Configurações" />
+                  </ListItem>
+                </Link>
+              </List>
+            </ClickAwayListener>
+          </Paper>
+        </MotionDiv>
       </Poppers>
 
       <Button className="VertIcon">

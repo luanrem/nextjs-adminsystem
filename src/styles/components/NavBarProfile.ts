@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 import { Scrollbars } from 'react-custom-scrollbars';
 
+import { motion } from 'framer-motion';
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -63,4 +65,8 @@ export const NotificationList = styled.div`
 
 export const ScrollbarsContainer = styled(Scrollbars)`
   height: 100px;
+`;
+
+export const MotionDiv = styled(motion.div)`
+
 `;

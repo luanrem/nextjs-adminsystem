@@ -5,8 +5,6 @@ import { useRouter } from 'next/router';
 import { Icon } from "@material-ui/core";
 import ButtonBase from '@material-ui/core/ButtonBase';
 
-import { motion } from 'framer-motion';
-
 import { Container, Slide } from '../../styles/components/MenuButton';
 
 export default function ManuButton({ layout, path, name, icon }) {
