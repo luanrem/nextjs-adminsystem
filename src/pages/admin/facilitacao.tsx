@@ -1,12 +1,12 @@
 import Admin from "../../layouts/Admin";
 
-import { Container } from '../../styles/pages/admin/dashboard';
+import { Container } from '../../styles/pages/admin/facilitacao';
 
 function Facilitacao() {
   return (
     <Container>
       <div>
-        <h1>Facilitacao</h1>
+        <h1>Administração</h1>
       </div>
     </Container>
   )

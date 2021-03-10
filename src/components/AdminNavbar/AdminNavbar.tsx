@@ -17,7 +17,7 @@ export default function AdminNavbar() {
 
   const HandleOpenDrawer = useCallback(() => {
     setOpen(!open);
-  }, [open])
+  }, [open]);
 
   return (
     <Content>
@@ -27,12 +27,12 @@ export default function AdminNavbar() {
           <Title>
             <Button>
               <Link href="/admin/dashboard">
-                <h1>MISSÃO RAMA</h1>
+                <h1>COMPANY</h1>
               </Link>
             </Button>
 
-            <Button 
-              size="small" 
+            <Button
+              size="small"
               onClick={() => router.back()}
             >
               Voltar
@@ -47,28 +47,29 @@ export default function AdminNavbar() {
             <Title>
               <Button>
                 <Link href="/admin/dashboard">
-                  <h1>MISSÃO RAMA</h1>
+                  <h2>COMPANY</h2>
                 </Link>
               </Button>
 
             </Title>
 
             <Button onClick={HandleOpenDrawer}>
-              <Menu/>
+              <Menu />
             </Button>
-            
+
           </MobileHeader>
-          <Drawer
-            variant="temporary"
-            className="drawerPaper"
-            anchor="right"
-            open={open}
-          >
-            <DrawerSideBar 
-              setOpen={setOpen}
+            <Drawer
+              variant="temporary"
+              className="drawerPaper"
+              anchor="right"
               open={open}
-            />
-          </Drawer>
+              onClick={HandleOpenDrawer}
+            >
+              <DrawerSideBar
+                setOpen={setOpen}
+                open={open}
+              />
+            </Drawer>
         </Hidden>
 
       </Container>

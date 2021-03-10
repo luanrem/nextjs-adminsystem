@@ -33,6 +33,11 @@ export default function ManuButton({ layout, path, name, icon }) {
                 scaleX: 1,
                 x: 0
               }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 30
+              }}
             /> :
             null
           }

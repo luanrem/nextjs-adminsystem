@@ -8,7 +8,7 @@ const routes = [
     layout: "/admin",
   },
   {
-    name: "Facilitação",
+    name: "Administração",
     icon: "android",
     
     path: "/facilitacao",

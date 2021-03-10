@@ -34,7 +34,7 @@ export default function DrawerSideBar({ setOpen, open }) {
             className="avatar"
           />
           <h2>Luan Martins</h2>
-          <span>Facilitador</span>
+          <span>Titulo</span>
         </AvatarContainer>
 
         {

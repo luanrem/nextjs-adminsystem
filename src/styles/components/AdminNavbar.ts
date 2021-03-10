@@ -33,15 +33,17 @@ export const Title = styled.div`
     color: var(--gray-line);
   }
 
+  h2 {
+    font-family: GoodTimes, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: var(--gray-line);
+  }
+
   button {
     color: var(--gray-line);
   }
 
-  @media (max-width: 400px) {
-    h1 {
-      font-size: 1rem;
-    }
-  }
+
 `;
 
 export const MobileHeader = styled.div`
