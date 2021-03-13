@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src=".github/NextJSLogo.png" alt="NextJS Logo" height="125" width="125">
+  <img src=".github/NextJSLogo.png" alt="NextJS Logo" height="125" width="auto">
   <br><br>
 </h1>
 
@@ -26,22 +26,15 @@
   </a>  
 </p>
 
-  <a href="#dizzy-roadmap">Roadmap</a> •
-<p align="center">
-  <a href="#blush-why">Why</a> •
-  <a href="#dizzy-roadmap">Install Instructions</a> •
-  <a href="#zap-tech-stack">Tech Stack</a> •
-  <a href="#handshake-contributing">Contributing</a> •  
-</p>
-
-<p align="center">
+<p align="center" style="display: flex; align-items: center; justify-content: center; flex-wrap: nowrap;">
   <kbd>
-    <img width="auto" style="border-radius: 5px" height="450" src=".github/gif01.gif" alt="Intro">
+    <img width="450" style="border-radius: 5px" height="auto" src=".github/gif01.gif" alt="Intro">
   </kbd>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <kbd>
-    <img width="auto" style="border-radius: 5px" height="450" src=".github/gif02.gif" alt="Register adopt">
+    <img width="450" style="border-radius: 5px" height="auto" src=".github/gif02.gif" alt="Register adopt">
   </kbd>
+  &nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 ## :blush: **Why?**
